@@ -1,37 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { FightersComponent } from './fighters/fighters.component';
-import { EventsComponent } from './events/events.component';
-import { MediaComponent } from './media/media.component';
-import { NewsComponent } from './news/news.component';
+import { CoreModule } from './core/core.module';
+import { NewsModule } from './news/news.module';
+import { FightersModule } from './fighters/fighters.module';
+import { EventsModule } from './events/events.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WelcomeComponent,
-    PageNotFoundComponent,
-    NavbarComponent,
-    FooterComponent,
-    FightersComponent,
-    EventsComponent,
-    MediaComponent,
-    NewsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    CoreModule,
+    NewsModule,
+    EventsModule,
+    FightersModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

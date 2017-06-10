@@ -1,3 +1,13 @@
-<p>
-  news works!
-</p>
+<div class="row">
+  <ng-container *ngFor="let newsItem of news">
+    <div class="col-lg-3 col-md-4 col-sm-6 .col-12 card-group">
+      <div class="card clickable" [routerLink]="['/news', newsItem.id]">
+        <img class="card-img-top" src="{{ newsItem.thumbnail }}" alt="Image" *ngIf="newsItem.thumbnail" style="max-width: 100%; height: auto;">
+        <div class="card-block">
+          <p class="card-title">{{newsItem.title}}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

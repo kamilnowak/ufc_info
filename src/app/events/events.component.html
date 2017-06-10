@@ -1,3 +1,15 @@
-<p>
-  events works!
-</p>
+<div class="row">
+  <ng-container *ngFor="let newsItem of events">
+    <div class="col-lg-3 col-md-4 col-sm-6 .col-12 card-group">
+      <div class="card clickable" [routerLink]="['/events', newsItem.id]">
+        <img class="card-img-top" src="{{ newsItem.feature_image }}" alt="Image" *ngIf="newsItem.feature_image" style="max-width: 100%; height: auto;">
+        <div class="card-block">
+          <h3 class="card-title">{{newsItem.base_title}}</h3>
+          <p class="card-text">{{newsItem.title_tag_line}}</p>
+          <p class="card-text">{{newsItem.event_date | date: 'dd/MM/yyyy'}}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

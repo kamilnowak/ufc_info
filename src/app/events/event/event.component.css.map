@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,4BAA6B;EAC3B,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,GAAG;EACnB,8CAAkB;IAChB,IAAI,EAAE,OAAO;EAEf,+CAAmB;IACjB,IAAI,EAAE,OAAO;EAEf,6CAAiB;IACf,IAAI,EAAE,OAAO;EAEf,8CAAkB;IAChB,IAAI,EAAE,OAAO;EAEf,iDAAqB;IACnB,IAAI,EAAE,OAAO;IACb,cAAc,EAAE,MAAM;IACtB,eAAe,EAAE,MAAM",
+"sources": ["event.component.scss"],
+"names": [],
+"file": "event.component.css"
+}

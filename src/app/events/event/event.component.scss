@@ -1,0 +1,22 @@
+:host /deep/ .flipcard-front {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  .fighter-name-red {
+    flex: 1 1 10%;
+  }
+  .fighter-name-blue {
+    flex: 1 1 10%;
+  }
+  .fc-portrait-red {
+    flex: 1 1 10%;
+  }
+  .fc-portrait-blue {
+    flex: 1 1 10%;
+  }
+  .fight-card-match-up {
+    flex: 1 1 10%;
+    vertical-align: center;
+    justify-content: center;
+  }
+}

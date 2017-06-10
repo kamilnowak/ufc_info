@@ -1,11 +1,12 @@
 import {Routes} from '@angular/router';
 
-import {WelcomeComponent} from './welcome/welcome.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import {NewsComponent} from "./news/news.component";
-import {MediaComponent} from "./media/media.component";
-import {EventsComponent} from "./events/events.component";
-import {FightersComponent} from "./fighters/fighters.component";
+import {WelcomeComponent} from './core/welcome/welcome.component';
+import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
+import {NewsComponent} from './news/news.component';
+import {EventsComponent} from './events/events.component';
+import {FightersComponent} from './fighters/fighters.component';
+import {ArticleComponent} from './news/article/article.component';
+import {EventComponent} from './events/event/event.component';
 
 export const appRoutes: Routes = [
     {
@@ -17,6 +18,10 @@ export const appRoutes: Routes = [
         component: NewsComponent
     },
     {
+        path: 'news/:id',
+        component: ArticleComponent
+    },
+    {
         path: 'fighters',
         component: FightersComponent
     },
@@ -25,8 +30,8 @@ export const appRoutes: Routes = [
         component: EventsComponent
     },
     {
-        path: 'media',
-        component: MediaComponent
+        path: 'events/:id',
+        component: EventComponent
     },
     {
       path: '**',

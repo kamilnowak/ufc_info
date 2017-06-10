@@ -1,13 +1,9 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
 html {
   height: 100%;
 }
 body {
   height: 100%;
   padding-top: 70px;
-  background: url("assets/mmafight.jpg") center center no-repeat;
-  background-size: cover;
 }
 
 .loading-screen {
@@ -30,6 +26,37 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-.jumbotron {
-  background-color: #e7e7e7;
+.container {
+  margin-bottom: 50px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.card {
+  margin-bottom: 10px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+
+@import url('//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+
+.custom-bullet li {
+    display: block;
+}
+
+.custom-bullet li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #CCCCCC;
 }
